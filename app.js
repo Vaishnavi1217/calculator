@@ -4,6 +4,7 @@ var add_btn = document.querySelector("#addbtn")
 var sub_btn = document.querySelector("#subbtn")
 var mul_btn = document.querySelector("#mulbtn")
 var div_btn = document.querySelector("#divbtn")
+var outputDiv = document.querySelector("#output-div")
 
 function addition(a,b){
     var sum = a+b;
@@ -11,7 +12,7 @@ function addition(a,b){
 }
 function addBtnClickHandler(){
     var sum = addition(Number(input_1.value),Number(input_2.value))
-    console.log(sum)
+    result("Addition is: " +sum)
 }
 function subtraction(a,b){
     var sub = a-b;
@@ -19,7 +20,7 @@ function subtraction(a,b){
 }
 function subBtnClickHandler(){
     var sub = subtraction(Number(input_1.value),Number(input_2.value))
-    console.log(sub)
+    result("Subtraction is: " +sub)
 }
 function multiply(a,b){
     var prod = a*b;
@@ -27,7 +28,7 @@ function multiply(a,b){
 }
 function mulBtnClickHandler(){
     var mul = multiply(Number(input_1.value),Number(input_2.value));
-    console.log(mul)
+    result("Multiplication is: " +mul)
 }
 function divide(a,b){
     var div = a/b;
@@ -35,8 +36,12 @@ function divide(a,b){
 }
 function divBtnClickHandler(){
     var div = divide(Number(input_1.value),Number(input_2.value))
-    console.log(div)
+    result("Division is: " +div)
 }
+function result(msg){
+    outputDiv.innerText = msg;
+}
+
 add_btn.addEventListener("click",addBtnClickHandler)
 sub_btn.addEventListener("click",subBtnClickHandler)
 mul_btn.addEventListener("click",mulBtnClickHandler)
