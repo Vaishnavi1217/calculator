@@ -19,3 +19,8 @@ button{
     font-size: x-large;
     cursor: pointer;
 }
+#output-div{
+    color: rgb(126, 222, 222);
+    font-size: larger;
+    padding: 1rem;
+}
